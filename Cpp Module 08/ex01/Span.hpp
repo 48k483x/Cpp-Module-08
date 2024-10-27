@@ -31,6 +31,16 @@ class Span {
     int longestSpan();  // Return the longest span
 
     // Mystery function
-    void addNumbers(unsigned int n);  // Add n random numbers
+    template <typename Iterator>
+    void addNumbers(Iterator begin, Iterator end) {
+      // First check: Do we have enough space?
+      unsigned int n = std::distance(begin, end);
+
+      if (vec.size() + n > N)
+        throw std::overflow_error("Not enough space to add n numbers");
+
+      // Add the numbers to the vector
+      vec.insert(vec.end(), begin, end);
+    }
 
 };
