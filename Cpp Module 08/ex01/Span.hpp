@@ -13,7 +13,7 @@
 class Span {
   private:
     unsigned int N;  // This is the MAXIMUM size allowed
-    std::vector<int> vec;   // This vector will store our numbers
+    std::vector<int> vec;   // This vector will store my numbers
 
   public:
     // Constructors

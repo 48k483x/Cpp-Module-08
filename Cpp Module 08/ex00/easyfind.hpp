@@ -7,27 +7,33 @@
 # include <list>
 # include <set>
 
-/*
- * Abstraction:
- * Iterators abstract the concept of a pointer. They provide a way to 
- * traverse elements in a container without exposing the underlying 
- * representation of the container.
+/*****************************************************************************
+ * C++ CONTAINERS & ITERATORS GUIDE
  *
- * Types of Iterators:
- * - Input Iterators: Read from a sequence.
- * - Output Iterators: Write to a sequence.
- * - Forward Iterators: Read and write, can move forward.
- * - Bidirectional Iterators: Forward iterators that can also move backward.
- * - Random Access Iterators: Bidirectional iterators that can jump to 
- *   any element in constant time.
+ * CONTAINERS: Template classes that store & manage collections of objects
+ *  - Automatic memory management
+ *  - Type-safe element access
+ *  - Standardized interface across different types
  *
- * Operations:
- * - Dereferencing: Access the value pointed to by the iterator.
- * - Increment/Decrement: Move the iterator to the next/previous element.
- * - Comparison: Check if two iterators are equal or not.
- */
-
-
+ * TYPES & USAGE:
+ *  Sequence    -> vector[]/deque<>/list{} : Direct element access
+ *  Associative -> map{k:v}/set{x}        : Ordered key-based access
+ *  Adapters    -> stack[]/queue->        : Restricted access patterns
+ *  Unordered   -> unordered_map/set      : Hash-based access (O(1))
+ *
+ * ITERATORS: Objects that navigate container elements
+ *  begin() → → → → → → → → → end()
+ *  |First valid|         |Past last|
+ *
+ * ITERATOR TYPES:
+ *  Input    →  Read only, forward
+ *  Output   →  Write only, forward
+ *  Forward  →  Read/Write, forward
+ *  Bidir    ←  Read/Write, both ways  →
+ *  Random   ↔  Read/Write, jump anywhere
+ *
+ * Each container provides appropriate iterator types for its data structure
+ *****************************************************************************/
 
 template <typename T>
 typename T::iterator easyfind(T& container, int value);
