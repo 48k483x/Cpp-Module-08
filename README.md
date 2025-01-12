@@ -1,7 +1,5 @@
-# 🗂 Project Structure
 
 ```
-
 cpp08/
 ├── ex00/
 │   ├── Makefile
@@ -16,12 +14,4 @@ cpp08/
     ├── Makefile
     ├── main.cpp
     └── MutantStack.hpp
-
 ```
-
-# 🎯 Module Overview
-🔑 Key Concepts
-
-* Iterators
-* Templated containers
-* algorithms
